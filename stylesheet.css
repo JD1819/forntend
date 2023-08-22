@@ -1,0 +1,157 @@
+*
+{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body
+{
+    background: url(image/iStock-1140691099.jpg) no-repeat;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+header
+{
+    position: relative;
+    padding: 0 2rem;
+    background: rgba(0, 0, 0, 0.377);
+}
+nav
+{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .logo
+{
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+nav .links
+{
+    display: flex;
+    gap: 2rem;
+}
+nav .links li
+{
+    list-style: none;
+    padding: 0 20px;
+}
+nav .links a, .dropdownmenu a
+{
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+nav .links a:hover
+{
+    color: rgb(0, 162, 255);
+}
+.GetStarted-btn
+{
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(0, 162, 255);
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 9px 25px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    transition: scale 0.2 ease;
+}
+.GetStarted-btn:hover
+{
+    scale: 1.05;
+}
+.GetStarted-btn:active
+{
+    scale: 0.95s;
+}
+nav .toggle-btn
+{
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+/*dropdown menu */
+.dropdownmenu
+{
+    height: 0;
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 250px;
+    background:rgba(0, 0, 0, 0.377);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdownmenu.display
+{
+    height: 265px;
+}
+.dropdownmenu li
+{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdownmenu a:hover
+{
+    color: rgb(0, 162, 255) ;
+}
+.dropdownmenu .GetStarted-btn:hover
+{
+    color: #fff;
+}
+.dropdownmenu .GetStarted-btn
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/*responsive navbar*/
+@media screen and (max-width:992px)
+{
+    nav .links,nav .GetStarted-btn
+    {
+        display: none;
+    }
+    nav .toggle-btn
+    {
+        display: block;
+    }
+    .dropdownmenu
+    {
+        display: block;
+    }
+   
+}
+
+@media screen and (max-width:576px)
+{
+    .dropdownmenu
+    {
+        left: 2rem;
+        width: unset;
+    }
+   
+}
